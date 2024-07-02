@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Gestion de Citas Celebres
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let cita of citas; let i = index">
+      <ion-label>
+        <h2>{{ cita.cita }}</h2>
+        <p><strong>{{ cita.autor }}</strong></p>
+      </ion-label>
+      <ion-button color="danger" (click)="confirmarBorrarCita(i)">
+        Eliminar
+      </ion-button>
+    </ion-item>
+  </ion-list>
+  
+
+</ion-content>
